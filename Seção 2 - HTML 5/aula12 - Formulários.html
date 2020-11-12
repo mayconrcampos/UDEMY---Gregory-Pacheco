@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Formulários</title>
+</head>
+<body>
+    <h1>Formulários Web - Trabalhando com dados do usuário</h1>
+
+    <section>
+        <p>Este módulo fornece uma série de artigos que o ajudarão a dominar o essencial das formas web. Os formulários da Web são uma ferramenta muito poderosa para interagir com os usuários — mais comumente eles são usados para coletar dados dos usuários ou permitir que eles controlem uma interface de usuário. No entanto, por razões históricas e técnicas, nem sempre é óbvio como usá-los em todo o seu potencial. Nos artigos listados abaixo, abordaremos todos os aspectos essenciais dos formulários da Web, incluindo marcar sua estrutura HTML, controlar os controles de formulário de estilo, validar dados de formulário e enviar dados ao servidor.</p>
+    </section>
+    <section>
+        <p>Temos os seguintes métodos que se comportam de maneiras diferentes.</p>
+        <p>GET, POST, PUT, DELETE</p>
+        <hr>
+        <h3>GET</h3>
+        <p>Read - Ler dados do servidor</p>
+        <p>Este método serve pra enviar informações ao servidor através da URL.</p>
+
+        <h3>POST</h3>
+        <p>Create - Cria novos dados no servidor.</p>
+        <p>Este método envia as informações ao servidor sem utilizar a URL, podendo ser assim mais seguro.</p>
+
+        <h3>PUT</h3>
+        <p>UPDATE - Atualiza dados no servidor.</p>
+        <p>Este método se comporta de forma semelhante a ambos.</p>
+
+        <h3>DELETE</h3>
+        <p>DELETE - Exclui dados do servidor.</p>
+        <p>Este também passa informações via URL.</p>
+    </section>
+
+    <section id="tab">
+        <form action="/my-handling-form-page" method="post">
+            <ul>
+             <li>
+               <label for="name">Name:</label>
+               <input type="text" id="name" name="user_name">
+             </li>
+             <li>
+               <label for="mail">E-mail:</label>
+               <input type="email" id="mail" name="user_email">
+             </li>
+             <li>
+               <label for="msg">Message:</label>
+               <textarea id="msg" name="user_message"></textarea>
+             </li>
+            </ul>
+        </form>
+    </section>
+
+  
+    
+</body>
+</html>

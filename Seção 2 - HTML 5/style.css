@@ -1,0 +1,36 @@
+body {
+    background: steelblue;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+h1 {
+    background: rgb(255, 255, 255);
+    margin-top: 100px;
+    border-radius: 8px;
+    box-shadow: 5px 5px 10px rgb(59, 6, 6);
+}
+section {
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgb(59, 6, 6);
+    width: auto;
+    margin-bottom: 10px;
+}
+ul#ul {
+    text-align: left;
+}
+p {
+    color: rgb(0, 0, 0);
+    text-justify: auto;
+    text-align: center;
+    font-size: larger;
+}
+section#tab {
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgb(59, 6, 6);
+    width: auto;
+    margin-bottom: 10px;
+}
