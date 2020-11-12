@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Aula 13 - Elementos Interativos</title>
+</head>
+<body>
+    <h1>Elementos Interativos e Depricated</h1>
+    
+    <section>
+        <h2>Elemento Details</h2>
+        <p><strong>Elemento details: é usado como uma ferramenta de onde o usuário irá obter informações adicionais.</strong></p>
+
+        <p>Exemplo:</p>
+        <details>
+            <summary>Alguns detalhes</summary>
+            <p>Mais informações sobre os detalhes.</p>
+            <p>Mais um pouquinho de informações.</p>
+        </details>
+    </section>
+    <section><h2>Elemento Dialog </h2>
+    
+        <!-- Um dialog simples contendo um form -->
+        <dialog open id="favDialog">
+            <form method="dialog">
+
+                <p><label for="favAnimal">Frutos do Mar Favorito:</label>
+                <select id="favAnimal">
+                  <option>Camarão Amilanesa</option>
+                  <option>Anchova Grelhada</option>
+                  <option>Papa Terra frita</option>
+                  <option>Salmão ao molho</option>
+                </select></p>
+
+              <menu>
+                <button id="cancel" type="reset">Cancela</button>
+                <button type="submit" onclick="confirma()" >Confirma</button>
+              </menu>
+            </form>
+          </dialog>
+
+          <menu>
+            <button id="updateDetails">Atualizar Detalhes</button>
+         </menu>
+         <div id="mostra"></div>
+
+    
+    </section>
+    <section>
+        <h2>O elemento menu representa um grupo de comandos que um usuário pode executar ou ativar. </h2> 
+        
+        <p>Isso inclui os menus de lista, que podem aparecer na parte superior de uma tela, bem como menus de contexto, como aqueles que podem aparecer sob um botão depois de clicado.</p>
+
+        <p>Vamos ver o exemplo abaixo:</p>
+        <!-- A <div> element with a context menu -->
+            <div contextmenu="popup-menu">
+                Clique com o botão direito do mouse para ver o menu.
+            </div>
+
+            <menu type="context" id="popup-menu">
+                <menuitem>Explodir Computador</menuitem>
+                <menuitem>Deletar todos os Arquivos</menuitem>
+                <hr/>
+                <menuitem>Acabar com tudo</menuitem>
+                <menuitem>Estou meio depre hoje</menuitem>
+          </menu>
+
+          <p>Este elemento não funciona em navegadores da base chromium, somente vindo a funcionar no firefox.</p>
+    </section>
+    <section>
+        <h2>Menu Toolbar</h2>
+        <menu type="toolbar">
+            <li>
+              <button type="menu" menu="file-menu">File</button>
+              <menu type="context" id="file-menu">
+                <menuitem label="New..." onclick="newFile()">
+                <menuitem label="Save..." onclick="saveFile()">
+              </menu>
+            </li>
+            <li>
+              <button type="menu" menu="edit-menu">Edit</button>
+              <menu type="context" id="edit-menu">
+                <menuitem label="Cut..." onclick="cutEdit()">
+                <menuitem label="Copy..." onclick="copyEdit()">
+                <menuitem label="Paste..." onclick="pasteEdit()">
+              </menu>
+            </li>
+          </menu>
+          <p>Este daqui também só funciona no Firefox.</p>
+    </section>
+
+    <script>
+        // Liga os Botoes update e cancel e o menu diálogo.
+        var updateButton = document.getElementById('updateDetails');
+        var cancelButton = document.getElementById('cancel');
+        var favDialog = document.getElementById('favDialog');
+        var mostra = document.getElementById("mostra")
+     
+        // O botão Update abre uma Dialog
+        updateButton.addEventListener('click', function() {
+          favDialog.showModal();
+        });
+    
+        // O botão cancelButtom fecha uma Dialog
+        cancelButton.addEventListener('click', function() {
+          favDialog.close();
+        });
+        
+    </script>
+    
+</body>
+</html>
