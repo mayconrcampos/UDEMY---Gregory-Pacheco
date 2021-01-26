@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seção 02 - Aula 36 - WebStorage</title>
+</head>
+<body>
+    <h1>WebStorage - Gravando dados no navegador</h1>
+
+    <div id="resultado"></div>
+
+    <button onclick="salvar()">Salvar</button>
+    <button onclick="ler()">Ler</button>
+    <button onclick="remover()">Remover</button>
+
+
+    <script>
+        function salvar(){
+            if(typeof(Storage) !== "undefined"){
+                localStorage.setItem("nome", "Maycon R Campos")
+                localStorage.setItem("idade", 38)
+                localStorage.setItem("Profissão", "Programador")
+            }else{
+                alert("Seu navegador não suporta Web Storage.")
+            }
+        }
+
+        function ler(){
+            if(typeof(Storage) !== "undefined"){
+                document.getElementById("resultado").innerHTML = localStorage.getItem("nome")
+
+                document.getElementById("resultado").innerHTML += `<br>${localStorage.getItem("idade")}`
+
+                document.getElementById("resultado").innerHTML += `<br>${localStorage.getItem("Profissão")}`
+            }else{
+                alert("Seu navegador não suporta Web Storage.")
+            }
+        }
+
+        function remover(){
+            if(typeof(Storage) !== "undefined"){
+                localStorage.removeItem("nome")
+                localStorage.removeItem("idade")
+                localStorage.removeItem("Profissão")
+            }else{
+                alert("Seu navegador não suporta Web Storage.")
+            }
+        }
+    </script>
+
+
+    
+</body>
+</html>
